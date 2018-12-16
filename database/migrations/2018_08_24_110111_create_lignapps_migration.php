@@ -18,7 +18,7 @@ class CreateLignappsMigration extends Migration
             $table->unsignedInteger('loc_id');
             $table->foreign('loc_id')->references('id')->on('locataires');
             $table->unsignedInteger('app_id');
-            $table->foreign('app_id')->references('id')->on('appartements');
+            $table->foreign('appartement_id')->references('id')->on('appartements');
             $table->datetime('dateh')->default(date('Y-m-d H:i:s'));
             $table->double('loyer')->default(0);
             $table->datetime('dates')->nullable;
