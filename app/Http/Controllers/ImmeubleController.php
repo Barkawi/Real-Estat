@@ -25,7 +25,7 @@ class ImmeubleController extends Controller
         $imeuble = new Immeuble();
         $imeuble->libelle = $request->libelle;
         $imeuble->zone_id = $request->zone;
-        $imeuble->prop_id = $request->prop;
+        $imeuble->proprietaire_id = $request->prop;
         $imeuble->save();
         session()->flash('success','l immeubles a ete bien enregistrer');
         return redirect('Immeubles');
@@ -36,7 +36,7 @@ class ImmeubleController extends Controller
         $imeuble = new Immeuble();
         $imeuble->libelle = $request->libelle;
         $imeuble->zone_id = $request->zone;
-        $imeuble->prop_id = $request->prop;
+        $imeuble->proprietaire_id = $request->prop;
         $imeuble->save();
         session()->flash('success','l immeubles a ete bien enregistrer');
         return redirect('zones/'.$request->zone);

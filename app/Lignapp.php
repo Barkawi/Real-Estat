@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Reglement;
+use App\Appartement;
 use DB;
 
 class Lignapp extends Model
 {
     public function appartement(){
-        return $this->belongsTo('App\Appartement');
+        return $this->belongsTo(Appartement::class,'app_id');
     }
 
     public function locataire(){
